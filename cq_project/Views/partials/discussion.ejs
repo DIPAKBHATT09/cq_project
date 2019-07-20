@@ -1,0 +1,573 @@
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <style media="screen">
+  .communityheader-profile-mobile {
+    height: 50px;
+  }
+  .community-panel-btn {
+      color: #fff;
+      background: transparent;
+      border-color: #fff;
+      transition: all .4s ease;
+      -webkit-transition: all .4s ease;
+  }
+  .community-header-top {
+      width: 100%;
+      background-image: linear-gradient(to bottom, #4ba2b7, #42a6be, #38aac6, #29adcd, #0fb1d5);
+      height: 50px;
+  }
+  .allSidesSoft {
+      box-shadow: 0 3px 10px 0 rgba(115,143,147,.3);
+  }
+  .panel {
+      border: 1px solid #DFDFDF !important;
+  }
+  .adminPic {
+      background: rgb(255, 255, 255) !important;
+      width: 50px;
+      height: 50px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+  }
+  .adminContent {
+      margin-top: 10px;
+  }
+  .communityprofile-name-pc {
+      overflow: auto;
+      z-index: 1;
+      height: 60px;
+      margin-top: 15px;
+      font-size: 20px;
+      font-family: 'Open Sans', sans-serif;
+      /* color: #838686; */
+      text-transform: capitalize;
+      font-weight: bold;
+  }
+  .img-communityprofile-pic {
+      background: rgb(255, 255, 255) !important;
+      height: 100px;
+      width: 100px;
+      z-index: 2;
+      position: absolute;
+      margin-top: -40px;
+      border: 4px solid #fff;
+          box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+  .btn {
+      border-radius: 0;
+
+  }
+  .commuity-profile-menu-btn {
+    margin-bottom: 5px;
+    float: right;
+    border: 2px solid #D1CFCF;
+}
+.manageCommunity-head-btn {
+    width: 80%;
+    color: #6F6E6E;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.allSidesSoft {
+    box-shadow: 0 3px 10px 0 rgba(115,143,147,.3);
+}
+.community-user-div {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.community-member-pic {
+    height: 50px;
+    width: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.comusername {
+    margin-top: 20px;
+    font-weight: bold;
+    /* color: #7D7D7D; */
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+.community-user-short-btn {
+    margin-top: 20px;
+    color: #7D7D7D;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.manageCommunity-btn-active {
+    color: #1C73DD !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+.manageCommunity-child-btn {
+    width: 80%;
+    color: #848484;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-top: 2px;
+    text-decoration: none;
+}
+.manageCommunity-child-btn {
+    width: 80%;
+    color: #848484;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-top: 2px;
+
+}
+.discussion-container {
+    padding: 0 20px 0 20px;
+}
+.discussion-heading {
+    padding-top: 10px;
+    color: #878787;
+    font-size: 20px;
+}
+.discussion-input-title {
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    word-wrap: break-word;
+    font-size: 15px;
+    color: #000;
+    outline: none !important;
+}
+.discussion-panel-body {
+    border-top: 1px solid #DFDFDF !important;
+}
+.discussion-body-textarea {
+    width: 100%;
+    font-size: 20px;
+    border: 0;
+    cursor: text !important;
+    resize: none;
+    outline: none !important;
+}
+.discussion-image-btn {
+    float: left;
+    color: #858585;
+    margin-top: 0px;
+    font-size: 30px;
+}
+.preview-image {
+    max-width: 400px;
+    max-height: 400px;
+    border: 6px solid #fff;
+    object-fit: contain;
+}
+#closeImgPreviewBtn {
+    float: left;
+    display: none;
+    color: #858585;
+    margin-top: 0px;
+    margin-left: 15px;
+    font-size: 30px;
+}
+.preview-image {
+    max-width: 400px;
+    max-height: 400px;
+    border: 6px solid #fff;
+    object-fit: contain;
+}
+.discussion-dropdown-menu {
+    float: right;
+    color: rgb(138, 138, 138);
+    font-size: 18px;
+    padding: 0 15px 0 15px;
+}
+.dropdown-menu-discussion {
+    padding: 0;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.discussion-title {
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    word-wrap: break-word;
+    font-size: 20px;
+    outline: none !important;
+    background-color: rgba(0, 0, 0, 0);
+}
+.discussion-content {
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: #000;
+    outline: none !important;
+    background-color: rgba(0, 0, 0, 0);
+}
+.comment-box {
+    padding: 10px 0px 10px 0px;
+}
+.discussion-comment-user {
+    height: 40px;
+    width: 40px;
+    margin-left: 0;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+.reply-input {
+    padding: 5px;
+}
+.discussion-com-profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.comment-btn-discussion {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(139, 139, 139);
+}
+.tag-still {
+    position: relative;
+    display: inline-block;
+    padding: .4em .5em;
+    margin: 2px 2px 2px 0;
+    font-size: 11px;
+    line-height: 1;
+    white-space: nowrap;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    color: #39739d;
+    background-color: #E1ECF4;
+    border-color: #E1ECF4;
+    font-size : 14px;
+}
+  </style>
+
+    <div id="page-content-wrapper" style="padding:0;margin-top:42px">
+             <div class="container-fluid page-content-div" style="padding:0">
+                <div class="row">
+                   <div class="col-lg-12 scoll-possible" style="padding:0;left:-5px;">
+
+
+
+
+      <div class="community-header-top communityheader-profile-mobile" style="padding-top:6px;position:relative;">
+        <div class="container pc">
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+    <div class="container community-profile-conatiner">
+    <div class="col-sm-2 col-xs-12 center-mobile pc">
+    <a href="/usercommunityprofile/<%=data[0].id%>">
+      <img src=<%=data[0].d.communityImage%>  class="img-communityprofile-pic allSides" style="background:#fff">
+    </a>
+    </div>
+
+    <div class="col-sm-8 communityprofile-name-pc communityprofile-system">
+      <a href="/community/communityprofile/5cf367c50a79ed143952599c" class="communityprofile-name-pc">
+      <%=data[0].d.communityName%>
+      </a>
+    </div>
+    <div class="col-sm-2 col-xs-12 center-mobile" style="padding-top:10px;float:right">
+    <div class="dropdown">
+      <button class="btn btn-default toggle commuity-profile-menu-btn" type="button" data-toggle="dropdown">
+        <i style="padding-right : 0px; font-size : 14px" class="fa fa-bars"></i>
+      </button>
+      <ul class="dropdown-menu custom-commuity-dropdown dropdown-menu-right" style="margin-top:40px">
+
+
+          <li>
+              <a href="/community/discussion/5ce262d10a79ed1439525910" class="community-profile-option-btn">
+                Discussions
+              </a>
+          </li>
+
+
+
+          <li>
+              <a href="/community/managecommunity/5ce262d10a79ed1439525910" class="community-profile-option-btn">
+                Manage Community
+              </a>
+          </li>
+
+
+          <li>
+              <a href="/community/communityprofile/5ce262d10a79ed1439525910" class="community-profile-option-btn">
+                Community Profile
+              </a>
+          </li>
+
+          <li>
+              <a href="/community/communitymembers/5ce262d10a79ed1439525910" class="community-profile-option-btn">
+                Community Members
+              </a>
+          </li>
+
+        </ul>
+    </div>
+    </div>
+
+    </div>
+    <center>
+        <hr style="border-top:2px solid #E6E6E6;width:85%;margin-top:0">
+    </center>
+
+
+
+
+    <div class="container discussion-input discussion-container">
+      <div class="panel panel-default allSidesSoft" style="border-radius:0;border:1px solid rgb(182, 182, 182) !important;">
+        <div class="panel-body" style="padding:5px;background:#f9f9f9;">
+          <div class="col-sm-1 col-xs-3">
+            <a href="/community/communityprofile/5cbf18d7f54a481812074358">
+              <img src=<%=data[0].d.communityImage%> class="discussion-com-profile-pic allSidesSoft" style="border:2px solid #fff">
+            </a>
+          </div>
+          <p class="col-sm-11 col-xs-9 discussion-heading">
+            Start a discussion
+          </p>
+        </div>
+    <form method="POST" enctype="multipart/form-data" id="discussionPostForm" action="/discussionpost/<%=data[0].d._id%>" >
+
+        <div class="panel-body discussion-panel-body">
+          <div class="col-sm-12 col-xs-12" style="padding:0;border-top: 1px solid white;">
+            <input type="text" style="width:100%" class="discussion-input-title" name="title" onclick="showDiscussionBody()" placeholder="Enter a discussion title....." id="discussion-title" autocomplete="off" required="">
+          </div>
+        </div>
+
+        <div class="panel-body discussion-body" id="discussionbody" style="display : none">
+            <div class="col-sm-12 col-xs-12" style="padding:0;border-top: 1px solid white;">
+              <!--Textarea-->
+                <textarea class="discussion-body-textarea" name="details" placeholder="Enter discussion details" id="discussion-details" autocomplete="off" required=""></textarea>
+              <!------------>
+            </div>
+
+            <div class="link-preview-main col-sm-12 col-xs-12">
+              <!-- preview here -->
+            </div>
+            <div class="tag-conatiner-custom-div">
+              <select id="tagEditor" name="tags"  class="form-control input-sm select2-multiple select2-hidden-accessible" style="width:100%" multiple="" tabindex="-1" aria-hidden="true">
+                <!--Tags option appended here-->
+              <!-- <option class="tagSuggestInput">abc</option><option class="tagSuggestInput">codequotient</option><option class="tagSuggestInput">dcxz</option><option class="tagSuggestInput">hello</option><option class="tagSuggestInput">hello uca valo  😂😂😂😂😂😂</option><option class="tagSuggestInput">helo</option><option class="tagSuggestInput">hey</option><option class="tagSuggestInput">hjbn</option><option class="tagSuggestInput">kk</option><option class="tagSuggestInput">kkkk</option><option class="tagSuggestInput">n</option><option class="tagSuggestInput">po</option><option class="tagSuggestInput">r</option><option class="tagSuggestInput">rb</option><option class="tagSuggestInput">superadmin</option><option class="tagSuggestInput">tt</option><option class="tagSuggestInput">uucbun</option><option class="tagSuggestInput">v</option><option class="tagSuggestInput">wqdefr</option><option class="tagSuggestInput">wqed</option><option class="tagSuggestInput">yn</option><option class="tagSuggestInput">,</option><option class="tagSuggestInput">,m</option><option class="tagSuggestInput">d</option><option class="tagSuggestInput">ds</option><option class="tagSuggestInput">hello uca valo 😂😂😂😂😂😂</option><option class="tagSuggestInput">m</option><option class="tagSuggestInput">sdvlnl</option><option class="tagSuggestInput">sdvsdvn</option><option class="tagSuggestInput">sldvnlk</option>--></select><span class="dropdown-wrapper" aria-hidden="true"></span>
+            </div>
+            <script type="text/javascript">
+
+              var request = new XMLHttpRequest();
+                request.addEventListener('load', function()
+                {
+                  console.log(JSON.parse(request.responseText));
+                  var ob=JSON.parse(request.responseText);
+                  var data1=[];
+                  for(var i=0;i<ob.length;i++)
+                  {
+                    data1[i]=ob[i].tname;
+                  }
+
+                    $(document).ready(function() {
+                     $('#tagEditor').select2({
+                        "placeholder" : "Enter tag...",
+                        "results": [
+                          {
+                            "id": 1,
+                            "text": "Option 1"
+                          },
+                          {
+                            "id": 2,
+                            "text": "Option 2"
+                          }
+                        ],
+                                              'data' : data1,
+                                              tags : true,
+                        tokenSeparators: [' ']
+                      });
+                    })
+
+
+
+                });
+                request.open('GET', '/gettags');
+                request.setRequestHeader("Content-Type", "application/json");
+                request.send();
+
+
+
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+            <div class="image-preview-main col-sm-12 col-xs-12">
+              <center>
+                <img src="" class="allSides preview-image" id="previewImage">
+              </center>
+            </div>
+            <input type="file" multiple="" class="discussion-file-btn" style="display : none;" name="discussionImageFile" id="discussionImageFile" accept="image/x-png,image/gif,image/jpeg" onchange="readURL(this);">
+            <div class="col-sm-12 col-xs-12" style="padding:0;">
+              <a href="#" class="discussion-image-btn" id="discussionImageClickBtn"><i class="fa fa-image" style="font-size : 30px;"></i></a>
+              <a id="closeImgPreviewBtn"><i class="fa fa-window-close"></i></a>
+              <button class="btn btn-primary" type="submit" style="float:right; height :35px; width : 60px " id="discussion-post">
+                <p class="discussion-post-btn-txt">Post</p>
+              <i class="fas fa-spinner discussion-post-spinner infinite-rotation"></i>
+              </button>
+            </div>
+        </div>
+      </form>
+      <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div id="discussionList">
+      <% for(var i=data[0].d.messages.length-1;i>=0;i--) { %>
+
+        <div class="container discussion-container " id="5cff364f0a79ed1439525b1b">
+            <div class="panel panel-default allSidesSoft" style="background:white;" id="panel-default5cff364f0a79ed1439525b1b">
+                <div class="dropup">
+                    <a class="discussion-dropdown-menu" data-toggle="dropdown" style="float:right !important"> <i class="fa fa-ellipsis-h"></i> </a>
+                    <ul class="dropdown-menu dropdown-menu-right dropdown-menu-discussion">
+                        <li><a class="request-dropdown-options" onclick="deleteDiscussion('5cff364f0a79ed1439525b1b')">Delete</a></li>
+                        <li id="featuredBtnLi5cff364f0a79ed1439525b1b"> <a class="request-dropdown-options" onclick="toggleFeature('5cff364f0a79ed1439525b1b',1)" id="featuredBtn5cff364f0a79ed1439525b1b">Feature</a> </li>
+                        <li id="globalBtnLi5cff364f0a79ed1439525b1b"> <a class="request-dropdown-options" onclick="toggleGlobal('5cff364f0a79ed1439525b1b',1)" id="globalBtn5cff364f0a79ed1439525b1b">Publish to CQ</a> </li>
+                    </ul>
+                </div>
+                <div class="panel-body" style="padding:0;padding-top:10px">
+                    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-title"> <a class="discussion-title" href="/community/selecteddiscussion/5cbf18d7f54a481812074358/5cff364f0a79ed1439525b1b" target="_blank"><%=data[0].d.messages[i].title%></a> </div>
+                    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-head"> posted by <a href="/viewprofile/5cbf11fe56f5d9f21a83ab3c"> <%=data[0].d.messages[i].senderName%> </a> </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 tagMainDiv" style="border-top: 1px solid white;padding:0">       <div class="col-sm-12">
+                <% for(var j=0;j<data[0].d.messages[i].tags.length;j++) {%>
+                <span class="tag-still"><%=data[0].d.messages[i].tags[j]%></span>
+                <% }%>
+                </div>     </div>
+
+                <div class="panel-body" style="padding:0;padding-top:10px;">
+                    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-content" style="font-size:16px"> <%=data[0].d.messages[i].details%> </div>
+                </div>
+                <div class="panel-body" style="padding:0;padding-top:10px;">
+                    <div class="col-sm-4 col-md-3 col-lg-2 col-xs-8">
+                        <a href="#" class="comment-btn-discussion" onclick="showCommentsAction('5cff364f0a79ed1439525b1b',)" id="showComments5cff364f0a79ed1439525b1b"> <i class="fa fa-comment-alt" style="font-size : 14px;padding-right : 0px"></i> 0
+                            <mobilenone>comments</mobilenone>
+                        </a>
+                        <!-- <a class="show-comment-btn show-hide-comments comment-btn-discussion" onclick="hideCommentsAction('5cff364f0a79ed1439525b1b')" id="ShowHideComments5cff364f0a79ed1439525b1b">Hide</a> -->
+                       </div>
+                </div>
+                <br>
+                <!-- <ul class="panel-body all-comments-box" id="allCommentsContainer5cff364f0a79ed1439525b1b"></ul> -->
+                <div class="panel-body comment-panel" id="commentpanel" style="border:0;padding:0;display : none">
+                    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 comment-box comment-compose-div-css" style="border-top: 1px solid #DFDFDF;" id="composeCommentDiv5cff364f0a79ed1439525b1b">
+                        <div class="col-sm-1 col-md-1 col-xs-2"> <img src="/dp.png" class="discussion-comment-user"> </div>
+                        <div class="col-sm-11 col-md-11 col-xs-10">
+                            <div class="input-group reply-input">
+                                <textarea type="text" autocomplete="off" class="form-control input-md comment-textarea" id="textarea5cff364f0a79ed1439525b1b" placeholder="reply to this discussion..." rows="1" maxlength="1500"></textarea> <span class="input-group-btn" style="padding-left:5px">                        <button class="btn btn-warning btn-md post-discussion-btn" onclick="postComment('5cff364f0a79ed1439525b1b')">Post</button>                      </span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+<script type="text/javascript">
+
+
+
+
+
+
+    (
+    function(){
+
+      var request = new XMLHttpRequest();
+      request.open('GET',"/getmessages/<%=data[0].d._id%>");
+      request.send();
+      request.onload = function()
+      {
+          commArr = JSON.parse(request.responseText);
+          console.log(commArr);
+          var mess=commArr[0].messages;
+          // for(var i in messages)
+          // {
+          //     console.log(i);
+          //          addDom(commArr[i]);
+          // }
+      }
+    }
+    )();
+
+function showCommentsAction()
+{
+  var commnetpanel=document.getElementById("commentpanel");
+  commnetpanel.setAttribute("style","display : contents");
+}
+
+
+function addDom(ob)
+{
+  // var discussionList=document.getElementById("discussionList");
+  // var div=document.createElement("div");
+  // div.innerHTML='<div class="container discussion-container " id="5d00813b0a79ed1439525b29"><div class="panel panel-default allSidesSoft" style="background:white;" id="panel-default5d00813b0a79ed1439525b29">       <div class="dropup">         <a class="discussion-dropdown-menu" data-toggle="dropdown" style="float:right !important">           <i class="fa fa-ellipsis-h"></i>         </a>        <ul class="dropdown-menu dropdown-menu-right dropdown-menu-discussion">           <li><a class="request-dropdown-options" onclick="deleteDiscussion("")">Delete</a></li>           <li id="featuredBtnLi5d00813b0a79ed1439525b29">               <a class="request-dropdown-options" onclick="toggleFeature('',1)" id="featuredBtn5d00813b0a79ed1439525b29">Feature</a>            </li>           <li id="globalBtnLi5d00813b0a79ed1439525b29">               <a class="request-dropdown-options" onclick="toggleGlobal('',1)" id="globalBtn5d00813b0a79ed1439525b29">Publish to CQ</a>            </li>         </ul>       </div>  <div class="panel-body" style="padding:0;padding-top:10px">    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-title">       <a class="discussion-title" href="/community/selecteddiscussion/5cbf18d7f54a481812074358/5d00813b0a79ed1439525b29" target="_blank">3we3ew</a>    </div>    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-head">      posted by <a href="/viewprofile/5cbf11fe56f5d9f21a83ab3c">superman</a> at 10:06 AM    </div>  </div>  <div class="panel-body" style="padding:0;padding-top:10px;">    <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 discussion-content" style="font-size:16px">3ew    </div>  </div>    <div class="panel-body" style="padding:0;padding-top:10px;">      <div class="col-sm-4 col-md-3 col-lg-2 col-xs-8">        <a class="comment-btn-discussion" onclick="showCommentsAction('',0)" id="showComments5d00813b0a79ed1439525b29">          <i class="fa fa-comment-alt"></i> 0 <mobilenone>comments</mobilenone>        </a><a class="show-comment-btn show-hide-comments comment-btn-discussion" onclick="hideCommentsAction('')" id="ShowHideComments5d00813b0a79ed1439525b29">Hide</a>      </div>    </div>      <br><ul class="panel-body all-comments-box" id="allCommentsContainer5d00813b0a79ed1439525b29"></ul>      <div class="panel-body comment-panel" style="border:0;padding:0">          <div class="col-sm-12 col-xs-12 col-lg-12 col-md-12 comment-box comment-compose-div-css" style="border-top: 1px solid #DFDFDF;" id="composeCommentDiv5d00813b0a79ed1439525b29">              <div class="col-sm-1 col-md-1 col-xs-2"> <img src="/Upload/Profile/1559636354568.jpeg" class="discussion-comment-user"> </div>              <div class="col-sm-11 col-md-11 col-xs-10">                  <div class="input-group reply-input">                      <textarea type="text" autocomplete="off" class="form-control input-md comment-textarea" id="textarea5d00813b0a79ed1439525b29" placeholder="reply to this discussion..." rows="1" maxlength="1500"></textarea>                      <span class="input-group-btn" style="padding-left:5px">                        <button class="btn btn-warning btn-md post-discussion-btn" onclick="postComment('')">Post</button>                      </span>                    </div>              </div>          </div>      </div>    </div>    </div>';
+  // discussionList.appendChild(div);
+}
+
+
+
+  var uploadimage=document.getElementById("discussionImageClickBtn");
+  uploadimage.addEventListener("click",function()
+  {
+    document.getElementById("discussionImageFile").click();
+  })
+
+
+
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#previewImage')
+                      .attr('src', e.target.result)
+
+              };
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+
+
+
+      function showDiscussionBody()
+      {
+        var discussionbody=document.getElementById("discussionbody");
+        discussionbody.setAttribute("style","display : block;")
+      }
+
+
+
+</script>
